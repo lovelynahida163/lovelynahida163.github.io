@@ -2,7 +2,7 @@
 # Site settings 站点基础信息
 # -------------------------
 title: 'Life of Nahida'
-description: 'Record my life'
+description: 'Seize the day'
 keyword: 'Nahida, blog' 
 url: 'https://lovelynahida163.github.io' # 严格对应你的 GitHub Pages 域名
 baseurl: ''

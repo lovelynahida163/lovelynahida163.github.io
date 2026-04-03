@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "你好，世界"
+title: "初来乍到"
 date: 2026-04-03
-categories: 生活
+categories: Life
 ---
-这是我的第一篇博客。  
-用 Markdown 写文章，**支持加粗**、[链接](https://github.com)等。
+这个是我的第一篇博客呢。以后这个小网站就当作树洞记录日常和学习生活啦。  
 
-以后每天写一篇，按日期自动排序。

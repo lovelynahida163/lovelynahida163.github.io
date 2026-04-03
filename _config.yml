@@ -61,5 +61,5 @@ permalink: /:year/:month/:day/:title.html
 # Comments 评论系统
 # -------------------------
 # H2O 原生仅硬编码了 Disqus 评论。国内访问受限，建议维持 false。
-comments: false
+comments: true
 # disqus_url: ''

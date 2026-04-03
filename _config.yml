@@ -1,17 +1,14 @@
-# 站点基础信息
 title: Life of Nahida
 description: 随意写写
 author: Nahida
-email: lovelynahida163@gmail.com   # 可改成你的邮箱
+email: lovelynahida163@gmail.com  
 
-# 主题设置（使用远程主题）
 remote_theme: bencentra/centrarium
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
-# 导航菜单（Centrarium 支持 header_pages）
 header_pages:
   - about.md
   # 如果需要归档页或分类页，可以继续加：
@@ -19,7 +16,6 @@ header_pages:
   # - categories.md
 
 # Centrarium 特定配置（可选，用于个性化）
-# 如果你不需要配图，可以禁用首页轮播图等
 # 具体请参考主题文档：https://github.com/bencentra/centrarium
 
 # 默认布局

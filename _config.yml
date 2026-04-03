@@ -21,7 +21,8 @@ theme-color: 'pink'
 # -------------------------
 author: 'Nahida'
 # 必须确保你的仓库中有对应路径的图片文件，否则前台依然会裂图
-avatar: 'https://avatars.githubusercontent.com/u/100000000' # 此处暂时代替为 GitHub 默认外链，建议后续改为 '/assets/img/avatar.png'
+# 侧边栏头像路径
+avatar: '/assets/img/1470e3fa01e7dfa1ac101fcc2223e970.jpg'
 bio: '随意写写 / Record my life'
 
 # 社交媒体链接 (控制侧边栏下方图标的渲染)

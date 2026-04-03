@@ -3,32 +3,37 @@ description: 随意写写
 author: Nahida
 email: lovelynahida163@gmail.com  
 
-remote_theme: bencentra/centrarium
+# 更换为 H2O 远程主题
+remote_theme: kaeyleo/jekyll-theme-H2O
+
+# 插件列表
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate # H2O 主题首页依赖此插件进行文章分页
 
-header_pages:
-  - about.md
-  # 如果需要归档页或分类页，可以继续加：
-  # - archives.md
-  # - categories.md
-
-# Centrarium 特定配置（可选，用于个性化）
-# 具体请参考主题文档：https://github.com/bencentra/centrarium
-
-# 默认布局
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: false   # 评论可后期用 Giscus
-
-# 文章链接格式（可选）
+# 文章链接格式
 permalink: /:year/:month/:day/:title/
 
-# 显示文章摘要（在首页）
-show_excerpts: true
+# -------------------------
+# H2O 主题专属配置参数
+# -------------------------
+
+# 主题色调：仅支持 'blue' 或 'pink'
+color: pink 
+
+# 分页数量配置（必须与 jekyll-paginate 配合）
+paginate: 10
+paginate_path: "/page:num/"
+
+# 评论开关配置
+# H2O 原生仅支持 Disqus。若要使用 Giscus，此处需保持 false，并在后续手动修改源码。
+comments:
+  disqus: false
+  disqus_url: ''
+
+# 侧边栏社交账号配置（填写对应的用户名即可在侧边栏显示图标）
+github_username: 
+# weibo_username: 
+# zhihu_username:

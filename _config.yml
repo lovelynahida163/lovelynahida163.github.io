@@ -63,3 +63,6 @@ permalink: /:year/:month/:day/:title.html
 # H2O 原生仅硬编码了 Disqus 评论。国内访问受限，建议维持 false。
 comments: false
 # disqus_url: ''
+
+future: true
+timezone: Asia/Shanghai

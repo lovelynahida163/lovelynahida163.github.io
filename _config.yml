@@ -66,3 +66,9 @@ comments: false
 
 future: true
 timezone: Asia/Shanghai
+
+# Markdown渲染器配置（必须开启GFM，否则表格解析异常）
+markdown: kramdown
+kramdown:
+  input: GFM          # 关键！开启GFM兼容，让kramdown支持GitHub式语法
+  hard_wrap: false    # 禁止自动换行，避免表格错乱

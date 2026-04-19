@@ -40,7 +40,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/day/title.html
 
 # -------------------------
 # Comments 评论系统
@@ -51,30 +51,9 @@ future: true
 timezone: Asia/Shanghai
 
 # -------------------------
-# Markdown + 数学公式 最终修正版（无重复、全生效）
+# Markdown 原始正常配置（无崩溃、无404、最安全）
 # -------------------------
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  math_engine: mathjax
-  parse_block_html: true
-  inline_math_delimiters: [["$", "$"]]
-  display_math_delimiters: [["$$", "$$"]]
-
-# 全局公式渲染脚本
-mathjax: true
-page_head: |
-  <script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']],
-      displayMath: [['$$', '$$']],
-      processEscapes: true
-    }
-  };
-  </script>
-

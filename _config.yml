@@ -40,7 +40,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-permalink: /year/month/day/title.html
+permalink: /:year/:month/:day/:title.html
 
 # -------------------------
 # Comments 评论系统
@@ -51,22 +51,30 @@ future: true
 timezone: Asia/Shanghai
 
 # -------------------------
-# ✅ 纯YML公式自动渲染（唯一修改点，全站自动生效）
+# Markdown + 数学公式 最终修正版（无重复、全生效）
 # -------------------------
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  math_engine: katex
+  math_engine: mathjax
   parse_block_html: true
+  inline_math_delimiters: [["$", "$"]]
+  display_math_delimiters: [["$$", "$$"]]
 
-# 全局自动注入KaTeX渲染引擎（H2O主题原生支持）
-head_custom: |
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:!1},{left:"$$",right:"$$",display:!0}],trust:!0,strict:"ignore",throwOnError:!1})});
+# 全局公式渲染脚本
+mathjax: true
+page_head: |
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+      processEscapes: true
+    }
+  };
+  </script>
 

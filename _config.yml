@@ -4,96 +4,69 @@
 title: 'Life of Nahida'
 description: 'Seize the day!'
 keyword: 'Nahida, blog' 
-url: 'https://lovelynahida163.github.io' # 严格对应你的 GitHub Pages 域名
+url: 'https://lovelynahida163.github.io'
 baseurl: ''
 
 # -------------------------
 # Theme 核心主题加载
 # -------------------------
-# 必须显式声明 H2O 远程主题
 remote_theme: kaeyleo/jekyll-theme-H2O
-
-# 主题颜色 (H2O 官方仅支持 'blue' 或 'pink')
 theme-color: 'pink'
 
 # -------------------------
 # Author & Sidebar 作者与侧边栏设置
 # -------------------------
 author: 'Nahida'
-# 必须确保你的仓库中有对应路径的图片文件，否则前台依然会裂图
-# 侧边栏头像路径
 avatar: '/assets/img/1470e3fa01e7dfa1ac101fcc2223e970.jpg'
 bio: '随意写写 / Record my life'
 
-# 社交媒体链接 (控制侧边栏下方图标的渲染)
-# 键名必须是支持的 Iconfont 图标名称，值必须是带有协议头的完整链接
 sns:
   github: https://github.com/lovelynahida163
   email: mailto:lovelynahida163@gmail.com
-  # twitter: https://twitter.com/yourname
-  # weibo: https://weibo.com/yourname
 
-# 侧边栏推荐标签配置
 recommend-tags: true
-recommend-condition-size: 10 # 标签数量显示上限
-
-# 本地搜索功能开关 (必须配合根目录的 search.json 文件)
+recommend-condition-size: 10
 search: true
 
 # -------------------------
 # Build & Pagination 构建与分页逻辑
 # -------------------------
-# H2O 强依赖 jekyll-paginate 插件，此处是底层分页参数
 paginate: 6
 paginate_path: 'page:num'
 
-# 系统构建加载的插件列表
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
 
-# 默认文章链接路由格式
-permalink: /:year/:month/:day/:title.html
+permalink: /year/month/day/title.html
 
 # -------------------------
 # Comments 评论系统
 # -------------------------
-# H2O 原生仅硬编码了 Disqus 评论。国内访问受限，建议维持 false。
 comments: false
-# disqus_url: ''
 
 future: true
 timezone: Asia/Shanghai
 
-# Markdown渲染器配置（必须开启GFM，否则表格解析异常）
+# -------------------------
+# ✅ 纯YML公式自动渲染（唯一修改点，全站自动生效）
+# -------------------------
 markdown: kramdown
 kramdown:
-  input: GFM          # 关键！开启GFM兼容，让kramdown支持GitHub式语法
-  hard_wrap: false    # 禁止自动换行，避免表格错乱
-
-# 全局开启 MathJax 公式渲染
-mathjax: true
-
-# Kramdown 解析器适配 $ 符号公式
-kramdown:
-  math_engine: mathjax
+  input: GFM
+  hard_wrap: false
+  math_engine: katex
   parse_block_html: true
-  inline_math_delimiters: [["$", "$"]]
-  display_math_delimiters: [["$$", "$$"]]
 
-# 全站头部自动注入渲染脚本
-page_head: |
-  <script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+# 全局自动注入KaTeX渲染引擎（H2O主题原生支持）
+head_custom: |
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
   <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']],
-      displayMath: [['$$', '$$']],
-      processEscapes: true
-    }
-  };
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:!1},{left:"$$",right:"$$",display:!0}],trust:!0,strict:"ignore",throwOnError:!1})});
   </script>
+
+

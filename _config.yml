@@ -72,3 +72,28 @@ markdown: kramdown
 kramdown:
   input: GFM          # 关键！开启GFM兼容，让kramdown支持GitHub式语法
   hard_wrap: false    # 禁止自动换行，避免表格错乱
+
+# 全局开启 MathJax 公式渲染
+mathjax: true
+
+# Kramdown 解析器适配 $ 符号公式
+kramdown:
+  math_engine: mathjax
+  parse_block_html: true
+  inline_math_delimiters: [["$", "$"]]
+  display_math_delimiters: [["$$", "$$"]]
+
+# 全站头部自动注入渲染脚本
+page_head: |
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+      processEscapes: true
+    }
+  };
+  </script>

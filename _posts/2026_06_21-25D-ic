@@ -4,3 +4,11 @@ title: "文献阅读 ：“The Survey of 2.5D Integrated Architecture: An EDA pe
 date: 2026-06-21
 categories: Learning
 ---
+
+特征维度	异构集成 (Heterogeneous Integration)	PCB (Printed Circuit Board)
+所处层级	芯片级 / 封装级 (Package Level)	板级 / 系统级 (Board Level)
+主要媒介	硅中介层 (Silicon Interposer)、RDL重布线层	覆铜板、玻璃纤维 FR-4
+特征尺寸 (线宽线距)	微米(μm) 甚至纳米(nm) 级别 (如 0.4μm - 2μm)	毫米(mm) 或微米(μm) 级别 (如 50μm - 100μm)
+互连密度	极高。引脚间距（Pitch）通常在几微米到几十微米	较低。芯片管脚到板上的焊盘间距通常在数百微米以上
+信号延迟与能耗	极低。传输距离极短（毫米级），寄生电容电感极小	较高。导线长（厘米级），信号衰减和功耗大
+制造环境	半导体晶圆厂（Fab）的超净间，工艺类似做芯片	传统的 PCB 制造厂与 SMT（表面贴装）组装厂
